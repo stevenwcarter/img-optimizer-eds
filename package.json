@@ -1,0 +1,43 @@
+{
+  "name": "@stevenwcarter/img-optimizer-eds",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "version": "0.1.0",
+  "description": "Enhancement to createOptimizedPicture from Adobe EDS to support multiple versions of an image at different breakpoints.",
+  "author": "Steven W. Carter <steve@javapl.us>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenwcarter/img-optimizer-eds.git"
+  },
+  "scripts": {
+    "build": "rolldown -c rolldown.config.mjs",
+    "release": "standard-version -s",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/stevenwcarter/img-optimizer-eds/issues"
+  },
+  "homepage": "https://github.com/stevenwcarter/img-optimizer-eds#readme",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.8.6",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.3.3",
+    "rolldown": "^0.13.2",
+    "standard-version": "^9.5.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.2"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js"
+}

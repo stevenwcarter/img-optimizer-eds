@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createMultiOptimizedPicture matches snapshot w eager=lazy 1`] = `
+<picture>
+  <source
+    media="(min-width: 600px)"
+    srcset="/img.jpg?width=2000&format=webply&optimize=medium"
+    type="image/webp"
+  />
+  <source
+    srcset="/img.jpg?width=750&format=webply&optimize=medium"
+    type="image/webp"
+  />
+  <source
+    media="(min-width: 600px)"
+    srcset="/img.jpg?width=2000&format=jpg&optimize=medium"
+  />
+  <img
+    alt=""
+    loading="lazy"
+    src="/img.jpg?width=750&format=jpg&optimize=medium"
+  />
+</picture>
+`;
+
+exports[`createMultiOptimizedPicture matches snapshot w eager=true 1`] = `
+<picture>
+  <source
+    media="(min-width: 600px)"
+    srcset="/img.jpg?width=2000&format=webply&optimize=medium"
+    type="image/webp"
+  />
+  <source
+    srcset="/img.jpg?width=750&format=webply&optimize=medium"
+    type="image/webp"
+  />
+  <source
+    media="(min-width: 600px)"
+    srcset="/img.jpg?width=2000&format=jpg&optimize=medium"
+  />
+  <img
+    alt=""
+    loading="eager"
+    src="/img.jpg?width=750&format=jpg&optimize=medium"
+  />
+</picture>
+`;
+
+exports[`createMultiOptimizedPicture multiple photos matches snapshot 1`] = `
+<picture>
+  <source
+    srcset="/img2.jpg?width=1000&format=webply&optimize=medium"
+    type="image/webp"
+  />
+  <source
+    media="(min-width: 600px)"
+    srcset="/img.jpg?width=2000&format=webply&optimize=medium"
+    type="image/webp"
+  />
+  <img
+    alt=""
+    loading="lazy"
+    src="/img.jpg?width=2000&format=jpg&optimize=medium"
+  />
+</picture>
+`;
