@@ -1,4 +1,6 @@
 Here are some recent changes:
+### [0.1.5](https://github.com/stevenwcarter/img-optimizer-eds/compare/v0.1.4...v0.1.5) (2024-11-01)
+
 ### [0.1.4](https://github.com/stevenwcarter/img-optimizer-eds/compare/v0.1.3...v0.1.4) (2024-11-01)
 
 ### [0.1.3](https://github.com/stevenwcarter/img-optimizer-eds/compare/v0.1.2...v0.1.3) (2024-11-01)
