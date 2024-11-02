@@ -57,5 +57,35 @@ export const createMultiOptimizedPicture = (
       }
     });
   });
-  return pictureEl;
+  return sortPictureElement(pictureEl);
+};
+
+const sortPictureElement = (pictures: HTMLPictureElement): HTMLPictureElement => {
+  const sources = Array.from(pictures.querySelectorAll('source'));
+  const img = pictures.querySelector('img');
+  sources.sort(breakpointSort);
+  pictures.innerHTML = '';
+  sources.forEach((source) => {
+    pictures.appendChild(source);
+  });
+  if (img) {
+    pictures.appendChild(img);
+  }
+  return pictures;
+};
+
+const minWidthRegex = /.*min-width: *(\d+)px/;
+const breakpointSort = (a: HTMLSourceElement, b: HTMLSourceElement) => {
+  const a_width = parseMinWidth(a);
+  const b_width = parseMinWidth(b);
+
+  console.log(a_width, b_width);
+
+  return b_width - a_width;
+};
+
+const parseMinWidth = (source: HTMLSourceElement): number => {
+  const media = source.getAttribute('media') || '';
+
+  return minWidthRegex.test(media) ? parseInt(minWidthRegex.exec(media)![1], 10) : 0;
 };

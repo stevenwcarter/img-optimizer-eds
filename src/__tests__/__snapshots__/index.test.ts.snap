@@ -8,15 +8,15 @@ exports[`createMultiOptimizedPicture matches snapshot w eager=lazy 1`] = `
     type="image/webp"
   />
   <source
-    srcset="/img.jpg?width=750&format=webply&optimize=medium"
-    type="image/webp"
-  />
-  <source
     media="(min-width: 600px)"
     srcset="/img.jpg?width=2000&format=jpg&optimize=medium"
   />
+  <source
+    srcset="/img.jpg?width=750&format=webply&optimize=medium"
+    type="image/webp"
+  />
   <img
-    alt=""
+    alt="Alt text"
     loading="lazy"
     src="/img.jpg?width=750&format=jpg&optimize=medium"
   />
@@ -31,15 +31,15 @@ exports[`createMultiOptimizedPicture matches snapshot w eager=true 1`] = `
     type="image/webp"
   />
   <source
-    srcset="/img.jpg?width=750&format=webply&optimize=medium"
-    type="image/webp"
-  />
-  <source
     media="(min-width: 600px)"
     srcset="/img.jpg?width=2000&format=jpg&optimize=medium"
   />
+  <source
+    srcset="/img.jpg?width=750&format=webply&optimize=medium"
+    type="image/webp"
+  />
   <img
-    alt=""
+    alt="Alt text"
     loading="eager"
     src="/img.jpg?width=750&format=jpg&optimize=medium"
   />
@@ -49,16 +49,16 @@ exports[`createMultiOptimizedPicture matches snapshot w eager=true 1`] = `
 exports[`createMultiOptimizedPicture multiple photos matches snapshot 1`] = `
 <picture>
   <source
-    srcset="/img2.jpg?width=1000&format=webply&optimize=medium"
-    type="image/webp"
-  />
-  <source
     media="(min-width: 600px)"
     srcset="/img.jpg?width=2000&format=webply&optimize=medium"
     type="image/webp"
   />
+  <source
+    srcset="/img2.jpg?width=1000&format=webply&optimize=medium"
+    type="image/webp"
+  />
   <img
-    alt=""
+    alt="Alt text"
     loading="lazy"
     src="/img.jpg?width=2000&format=jpg&optimize=medium"
   />

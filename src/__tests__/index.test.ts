@@ -8,13 +8,16 @@ describe('createMultiOptimizedPicture', () => {
   beforeEach(() => {
     pic = {
       src: 'https://test.com/img.jpg',
+      alt: 'Alt text',
     };
     pic1 = {
       src: 'https://test.com/img2.jpg',
+      alt: 'Alt text',
       breakpoints: [{ width: 1000 }],
     };
     pic2 = {
       src: 'https://test.com/img.jpg',
+      alt: 'Alt text',
       breakpoints: [{ media: '(min-width: 600px)', width: 2000 }],
     };
   });
@@ -46,6 +49,12 @@ describe('createMultiOptimizedPicture', () => {
     const result = createMultiOptimizedPicture([pic1, pic2]);
 
     expect(result!.querySelectorAll('img').length).toBe(1);
+  });
+  it('multiple photos are in order of media breakpoint size', () => {
+    const result = createMultiOptimizedPicture([pic1, pic2]);
+
+    const firstSource = result!.querySelectorAll('source')[0];
+    expect(firstSource).toHaveAttribute('media');
   });
   it('multiple photos matches snapshot', () => {
     const result = createMultiOptimizedPicture([pic1, pic2]);
