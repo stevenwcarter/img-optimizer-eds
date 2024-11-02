@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Enhancement to createOptimizedPicture from Adobe EDS to support multiple versions of an image at different breakpoints.",
   "author": "Steven W. Carter <steve@javapl.us>",
   "license": "MIT",
